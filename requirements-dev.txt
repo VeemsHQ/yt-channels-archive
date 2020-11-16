@@ -1,0 +1,10 @@
+-r requirements.txt
+pytest-mock==2.0.0
+pytest==5.3.5
+pytest-cov==2.8.1
+ipdb==0.12.3
+flake8==3.7.9
+pep8-naming==0.9.1
+mccabe==0.6.1
+yapf==0.29.0
+rope==0.16.0
