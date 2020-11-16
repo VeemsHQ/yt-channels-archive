@@ -12,10 +12,11 @@ def test_cli(mocker, tmpdir):
         'https://youtube.com/c/ABC',
     ]
     runner = CliRunner()
+
     result = runner.invoke(main, ['--output-dir', tmpdir] + channel_urls)
+
     assert result.exit_code == 0
     assert result.output == ''
-
     assert (
         mock_youtube_dl.YoutubeDL().__enter__().download.call_count ==
         len(channel_urls)
