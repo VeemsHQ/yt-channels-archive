@@ -1,1 +1,1 @@
-# yt_channels_archive
+# yt-channels-archive
