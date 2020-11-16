@@ -1,5 +1,6 @@
 # yt-channels-archive
 
+A CLI tool to backup multiple YouTube channels along with their associated metadata and thumbnails. In the highest available quality.
 
 ## Installation
 
