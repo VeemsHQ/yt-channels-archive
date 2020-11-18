@@ -1,0 +1,11 @@
+-r requirements.txt
+pytest-mock==3.3.1
+pytest==6.1.2
+pytest-cov==2.10.1
+ipdb==0.13.4
+flake8==3.8.4
+pep8-naming==0.11.1
+mccabe==0.6.1
+yapf==0.30.0
+rope==0.18.0
+zest.releaser==6.22.1
