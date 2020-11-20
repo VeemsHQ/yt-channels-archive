@@ -1,6 +1,8 @@
 import os
 import re
 from copy import deepcopy
+from functools import partial
+from multiprocessing.dummy import Pool
 
 import youtube_dl
 import click
@@ -24,6 +26,16 @@ YDL_OPTS = {
 }
 
 
+def _download_channel(channel_url, output_dir):
+    opts = deepcopy(YDL_OPTS)
+    folder_name = (
+        REGEX_CHANNEL_ID.search(channel_url).groupdict()['channel_id']
+    )
+    opts['outtmpl'] = f'{output_dir}/{folder_name}/{opts["outtmpl"]}'
+    with youtube_dl.YoutubeDL(opts) as ydl:
+        ydl.download([channel_url])
+
+
 @click.command()
 @click.option('--output-dir')
 @click.argument('channel_urls', nargs=-1)
@@ -33,14 +45,10 @@ def main(output_dir, channel_urls):
     except FileExistsError:
         pass
 
-    for channel_url in channel_urls:
-        opts = deepcopy(YDL_OPTS)
-        folder_name = (
-            REGEX_CHANNEL_ID.search(channel_url).groupdict()['channel_id']
-        )
-        opts['outtmpl'] = f'{output_dir}/{folder_name}/{opts["outtmpl"]}'
-        with youtube_dl.YoutubeDL(opts) as ydl:
-            ydl.download([channel_url])
+    pool = Pool(len(channel_urls))
+    download = partial(_download_channel, output_dir=output_dir)
+    for _ in pool.map(download, channel_urls):
+        pass
 
 
 if __name__ == '__main__':
