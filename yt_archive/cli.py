@@ -2,7 +2,7 @@ import os
 import re
 from copy import deepcopy
 from functools import partial
-from multiprocessing.dummy import Pool
+from multiprocessing import Pool
 
 import youtube_dl
 import click
