@@ -5,7 +5,7 @@ A CLI tool to backup multiple YouTube channels along with their associated metad
 ## Installation
 
 ```bash
-pip install -r requirements-dev.txt
+pip install yt-channels-archive
 ```
 
 ## Usage
@@ -17,11 +17,13 @@ yt_archive --output-dir ./backup https://www.youtube.com/channel/UC7edjYPNhTm5LY
 ## Running the tests
 
 ```bash
+pip install -r requirements-dev.txt
 pytest tests
 ```
 
 ## Running the linter
 
 ```bash
+pip install -r requirements-dev.txt
 flake8
 ```
