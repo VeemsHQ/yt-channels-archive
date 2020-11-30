@@ -12,7 +12,7 @@ REGEX_CHANNEL_ID = re.compile(
 )
 
 YDL_OPTS = {
-    'format': 'best',
+    'format': 'bestvideo+bestaudio',
     'retries': 4,
     'continue': True,
     'writeinfojson': True,

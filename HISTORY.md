@@ -4,7 +4,7 @@ Release History
 0.1.1 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Corrects some 4k files missing audio.
 
 
 0.1.0 (2020-11-28)
