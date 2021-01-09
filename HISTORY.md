@@ -1,7 +1,7 @@
 Release History
 ===============
 
-0.1.2 (unreleased)
+0.1.2 (2021-01-09)
 ------------------
 
 - Fix to prevent duplicate download work.
