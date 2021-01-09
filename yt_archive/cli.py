@@ -2,6 +2,7 @@ import os
 import re
 from copy import deepcopy
 from functools import partial
+from pathlib import Path
 from multiprocessing import Pool
 
 import youtube_dl
@@ -13,7 +14,7 @@ REGEX_CHANNEL_ID = re.compile(
 
 YDL_OPTS = {
     'format': 'bestvideo+bestaudio',
-    'retries': 4,
+    'retries': 10,
     'continue': True,
     'writeinfojson': True,
     'writedescription': True,
@@ -28,6 +29,7 @@ YDL_OPTS = {
 
 def _download_channel(channel_url, output_dir):
     opts = deepcopy(YDL_OPTS)
+    opts['download_archive'] = str(Path(output_dir) / 'download_archive.txt')
     folder_name = (
         REGEX_CHANNEL_ID.search(channel_url).groupdict()['channel_id']
     )
