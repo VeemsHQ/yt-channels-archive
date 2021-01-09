@@ -4,7 +4,7 @@ Release History
 0.1.2 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix to prevent duplicate download work.
 
 
 0.1.1 (2020-11-30)
