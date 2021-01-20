@@ -4,7 +4,7 @@ Release History
 0.1.3 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Fix 429 errors.
 
 
 0.1.2 (2021-01-09)
