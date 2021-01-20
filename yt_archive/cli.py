@@ -46,8 +46,8 @@ def main(output_dir, channel_urls):
         os.mkdir(output_dir)
     except FileExistsError:
         pass
-
-    pool = Pool(len(channel_urls))
+    num_proc = min(2, len(channel_urls))
+    pool = Pool(num_proc)
     download = partial(_download_channel, output_dir=output_dir)
     for _ in pool.map(download, channel_urls):
         pass
