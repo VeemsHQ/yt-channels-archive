@@ -4,7 +4,7 @@ Release History
 0.1.4 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- youtube_dl==2021.1.16.
 
 
 0.1.3 (2021-01-20)
