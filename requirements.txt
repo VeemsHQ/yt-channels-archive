@@ -1,3 +1,3 @@
-youtube_dl==2021.1.16
+-e git://github.com/ytdl-org/youtube-dl.git@master#egg=youtube_dl
 click>=7.1.2,<8.0.0
 wheel
