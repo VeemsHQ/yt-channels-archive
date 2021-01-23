@@ -1,7 +1,7 @@
 Release History
 ===============
 
-# (2021-01-23)
+0.1.7 (unreleased)
 --------------
 
 - Revert previous 2.
