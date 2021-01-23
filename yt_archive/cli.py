@@ -24,8 +24,8 @@ YDL_OPTS = {
     'ignoreerrors': True,
     'addmetadata': True,
     'outtmpl': '%(title)s.%(ext)s',
-    'force': 'ipv4',
-    'ipv4': True,
+    'force': 'ipv6',
+    'ipv6': True,
 }
 
 

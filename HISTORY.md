@@ -4,7 +4,7 @@ Release History
 0.1.6 (unreleased)
 ------------------
 
-- Nothing changed yet.
+- Force ipv6.
 
 
 0.1.5 (2021-01-23)
