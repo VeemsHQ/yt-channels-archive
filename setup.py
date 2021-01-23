@@ -20,7 +20,7 @@ with open('HISTORY.md', 'r', encoding='utf-8') as hist_file:
 
 setup(
     name='yt-channels-archive',
-    version='0.1.5.dev0',
+    version='0.1.5',
     packages=find_packages(exclude=['tests*']),
     include_package_data=True,
     zip_safe=False,
