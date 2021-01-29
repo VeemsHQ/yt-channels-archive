@@ -2,7 +2,7 @@ import json
 import re
 from urllib.parse import urlparse
 import attr
-import requests 
+import requests
 from bs4 import BeautifulSoup
 
 

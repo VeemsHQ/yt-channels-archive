@@ -39,7 +39,6 @@ CHANNEL_INFO_OPTS = {
 
 def _download_channel_info(channel_url, out_dir):
     channel_info = ChannelInfoExtractor.for_url(channel_url)._extract()
-    channel_id = channel_info['channel_id']
     out_path_map = {
         key: value.format(out_dir)
         for key, value in CHANNEL_INFO_OPTS.items()
