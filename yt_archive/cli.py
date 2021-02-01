@@ -73,9 +73,9 @@ def make_dir(out_dir):
 def _download_channel(channel_url, output_dir):
     opts = deepcopy(YDL_OPTS)
     opts['download_archive'] = str(Path(output_dir) / 'download_archive.txt')
-    folder_name = (
-        REGEX_CHANNEL_ID.search(channel_url).groupdict()['channel_id']
-    )
+    folder_name = REGEX_CHANNEL_ID.search(channel_url).groupdict()[
+        'channel_id'
+    ]
     opts['outtmpl'] = f'{output_dir}/{folder_name}/{opts["outtmpl"]}'
     out_dir = f'{output_dir}/{folder_name}'
     # download channel info using web scrapper
