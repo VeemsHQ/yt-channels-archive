@@ -1,7 +1,7 @@
 Release History
 ===============
 
-0.2.0 (unreleased)
+0.2.0 (2021-02-01)
 ------------------
 
 - Adds Channel images and other metadata to the archive.
