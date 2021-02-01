@@ -4,6 +4,7 @@ TEST_YT_URL = [
     "https://www.youtube.com/channel/UCJ04m06GHw3DUDQG6chCAUA"
 ]
 
+# flake8: noqa: E501
 EXPECTED_CHANNEL_INFO = [{
     "banner_image": "https://yt3.ggpht.com/8KAWGmJW1qnYHs9H3fbC1VBNjPo8iIw8WMzDd4vp49zEfmjNf7f_OayTR5CcDbT1t6ZM8NuHYKY=w2560-fcrop64=1,00005a57ffffa5a8-k-c0xffffffff-no-nd-rj",
     "avatar_image": "https://yt3.ggpht.com/ytc/AAUvwnglfb37hW7zsrx1CtBXfFnPWyWTbxYXpBCWZ5EO=s176-c-k-c0x00ffffff-no-rj",
