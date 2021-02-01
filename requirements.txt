@@ -3,5 +3,5 @@ click>=7.1.2,<8.0.0
 wheel
 requests==2.25.1
 attrs==20.3.0
-bs4==0.0.1
+beautifulsoup4==4.9.3
 html5lib==1.1

@@ -6,6 +6,12 @@ import requests
 from bs4 import BeautifulSoup
 
 
+class ChannelInfoExtractorException(Exception):
+    def __init__(self, message=None, error=None):
+        self.message = message
+        self.error = error
+
+
 @attr.s
 class ChannelInfo(object):
     channel_id = attr.ib()
@@ -25,7 +31,10 @@ class YTExtractor(object):
     yt_url = attr.ib()
 
     def _fetch_url_content(self):
-        return requests.get(self.yt_url).content
+        response = requests.get(self.yt_url)
+        if response.status_code != 200:
+            raise(ChannelInfoExtractorException('Requested Url not found'))
+        return response.content
 
     def _get_yt_json(self):
         yt_json = {}

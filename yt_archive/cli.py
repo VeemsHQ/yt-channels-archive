@@ -2,9 +2,9 @@ import os
 import re
 import json
 from copy import deepcopy
+from pathlib import Path
 import urllib.request
 from functools import partial
-from pathlib import Path
 from multiprocessing import Pool
 from .extractor import ChannelInfoExtractor
 
@@ -44,11 +44,14 @@ def _download_channel_info(channel_url, out_dir):
         for key, value in CHANNEL_INFO_OPTS.items()
     }
     # save banner image to disk
-    urllib.request.urlretrieve(channel_info['banner_image'],
-                               out_path_map['banner_out'])
+    if channel_info['banner_image']:
+        urllib.request.urlretrieve(channel_info['banner_image'],
+                                   out_path_map['banner_out'])
+
     # save avatar image to disk
-    urllib.request.urlretrieve(channel_info['avatar_image'],
-                               out_path_map['avatar_out'])
+    if channel_info['avatar_image']:
+        urllib.request.urlretrieve(channel_info['avatar_image'],
+                                   out_path_map['avatar_out'])
     # save description to disk
     with open(out_path_map['description'], 'w') as fs:
         fs.write(channel_info['description'])
@@ -57,11 +60,8 @@ def _download_channel_info(channel_url, out_dir):
         fs.write(json.dumps(channel_info, indent=4))
 
 
-def make_dir(_dir):
-    try:
-        os.mkdir(_dir)
-    except FileExistsError:
-        pass
+def make_dir(out_dir):
+    Path(out_dir).mkdir(parents=True, exist_ok=True)
 
 
 def _download_channel(channel_url, output_dir):
