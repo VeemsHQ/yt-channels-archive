@@ -73,7 +73,7 @@ class ChannelInfoExtractor(object):
         domain_extractor_map = {
             'www.youtube.com': YTExtractor(url)
         }
-        return domain_extractor_map.get(urlparse(url).netloc)
+        return domain_extractor_map.get(urlparse(url).netloc, YTExtractor(url))
 
     @classmethod
     def for_url(cls, url):

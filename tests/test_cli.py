@@ -12,6 +12,10 @@ MODULE = "yt_archive.cli"
 def replace_process_pool_with_thread(mocker):
     mocker.patch(f"{MODULE}.Pool", Pool)
 
+@pytest.fixture(autouse=True)
+def replace_download_with_mock(mocker):
+    mocker.patch(f"{MODULE}._download_channel_info", return_value=None)
+
 
 def test_cli(mocker, tmpdir):
     mock_youtube_dl = mocker.patch(f"{MODULE}.youtube_dl")
