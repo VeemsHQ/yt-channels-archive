@@ -14,7 +14,7 @@ pip install yt-channels-archive
 yt_archive --output-dir ./backup https://www.youtube.com/channel/UC7edjYPNhTm5LYJMT7UMt0Q/videos https://www.youtube.com/channel/UC6cMYsKMx6XicFcFm7mTsmA
 ```
 
-You may notice this will also place a file in your backup folder called 'download_archive.txt'.
+You may notice this will also places a file in your backup folder called 'download_archive.txt'.
 
 Don't delete that as it's used to ensure videos are only downloaded once (if you remove it and re-run the above command existing videos will be re-downloaded).
 
