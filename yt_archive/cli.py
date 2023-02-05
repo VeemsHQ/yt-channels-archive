@@ -27,6 +27,7 @@ YDL_OPTS = {
     'ignoreerrors': True,
     'addmetadata': True,
     'outtmpl': '%(title)s.%(ext)s',
+    'source_address': '0.0.0.0'  # bind to ipv4 only, ipv6 has issues at times
 }
 
 CHANNEL_INFO_OPTS = {

@@ -5,6 +5,7 @@ Release History
 ------------------
 
 - youtube_dl==2021.4.1.
+- Connect via ipv4 only.
 
 
 0.2.0 (2021-02-01)
