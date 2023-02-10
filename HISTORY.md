@@ -4,7 +4,7 @@ Release History
 ## 0.2.2 (unreleased)
 ---------------------
 
-- Nothing changed yet.
+- Use yt-dlp.
 
 
 ## 0.2.1 (2023-02-05)

@@ -82,7 +82,7 @@ def _download_channel(channel_url, output_dir):
     # download channel info using web scrapper
     make_dir(out_dir)
     _download_channel_info(channel_url, out_dir)
-    with youtube_dl.YoutubeDL(opts) as ydl:
+    with yt_dlp.YoutubeDL(opts) as ydl:
         ydl.download([channel_url])
 
 
