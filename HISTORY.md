@@ -1,7 +1,12 @@
 Release History
 ===============
 
-## 0.2.2 (unreleased)
+## 0.2.3 (unreleased)
+---------------------
+
+- Use yt-dlp from Git source (to get latest bugfixes ASAP).
+
+## 0.2.2 (2023-02-20)
 ---------------------
 
 - Use yt-dlp.
